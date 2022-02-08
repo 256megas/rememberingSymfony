@@ -1,0 +1,23 @@
+{% extends 'universal.html.twig' %}
+
+{% block title %} Global de noticias{% endblock %}
+
+
+
+{% block contenido %}
+    <h1>Esta es la sección global de noticias</h1>
+    <ul>
+        {% for noticia in noticias %}
+            {% if noticia.ID!= 2 %}
+                <li>
+                    <a href="{{ url('noticiaSingle',{id:noticia.ID}) }}">{{ noticia.titulo }}</a>
+                </li>
+            {% else %}
+                <li>
+                    {{ noticia.titulo }}
+                </li>
+            {% endif %}
+
+        {% endfor %}
+    </ul>
+{% endblock %}

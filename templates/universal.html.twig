@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 14px;
+        }
+
+        #global{
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #cabecera{
+            margin-bottom:30px;
+        }
+
+        #contenido{
+            min-height:300px;
+        }
+
+        #pie{
+            margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="global">
+        <div id="cabecera">
+            Este curso de Symfony 5 es el mejor
+        </div>
+        <div id="contenido">
+            {% block contenido %}
+                Este es el contenido cuando no ponemos nada
+            {% endblock %}
+        </div>
+        <div id="pie">
+            Aviso Legal
+        </div>        
+    </div>
+</body>
+</html>
