@@ -5,30 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <style type="text/css">
-        body {
-            font-family: Arial;
-            font-size: 14px;
-        }
-
-        #global{
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        #cabecera{
-            margin-bottom:30px;
-        }
-
-        #contenido{
-            min-height:300px;
-        }
-
-        #pie{
-            margin-top:30px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset("static/css/bootstrap.min.css") }}"> 
+    <link rel="stylesheet" href="{{ asset("static/css/global.css") }}"> 
+    {% block css %}{% endblock %}
+    {% block js %}{% endblock %}
 </head>
 <body>
     <div id="global">

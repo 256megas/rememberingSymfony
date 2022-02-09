@@ -1,0 +1,22 @@
+body {
+    font-family: Arial;
+    font-size: 14px;
+}
+
+#global{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#cabecera{
+    margin-bottom:30px;
+}
+
+#contenido{
+    min-height:300px;
+}
+
+#pie{
+    margin-top:30px;
+}

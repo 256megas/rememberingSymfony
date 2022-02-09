@@ -2,7 +2,14 @@
 
 {% block title %} Global de noticia {{ idNoticia }}{% endblock %}
 
+{% block js %} 
+    <script type="text/javascript" src="{{ asset("static/js/noticias/individuales.js") }}"></script>
+{% endblock %}
+
+
 {% block contenido %}
     <h1>Esta es la vista single {{ idNoticia }}</h1>
+    <img src="{{ asset('static/img/cabra.jpg') }}" style="width:200px;"/>
+    <br/>
     <a href="{{ url('noticias') }}">Seccion principal de noticias</a>
 {% endblock %}
